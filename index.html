@@ -17,7 +17,7 @@ body {
     color:#fff;
 }
 
-/* ================= HEADER (DESKTOP ORIGINAL) ================= */
+/* HEADER */
 header {
     position:fixed;
     top:0;
@@ -57,12 +57,11 @@ nav a.active {
     color:#fff;
 }
 
-/* ================= HERO (DESKTOP ORIGINAL) ================= */
+/* HERO */
 .title-section {
     width:100%;
     min-height:100vh;
     display:flex;
-    flex-direction:column;
     justify-content:flex-start;
     align-items:center;
     text-align:center;
@@ -73,16 +72,6 @@ nav a.active {
     background-position:center top;
     background-attachment:fixed;
     position:relative;
-}
-
-.title-section h1 {
-    font-family:'Anton',sans-serif;
-    font-size:4.5rem;
-    letter-spacing:5px;
-    text-shadow:2px 2px 15px rgba(0,0,0,0.8);
-    margin-bottom:10px;
-    opacity:0;
-    animation:fadeInDown 1.2s ease-out forwards;
 }
 
 .title-section p {
@@ -98,12 +87,7 @@ nav a.active {
         redWhitePulse 1.5s infinite alternate;
 }
 
-/* ================= ANIMATIONS ================= */
-@keyframes fadeInDown {
-    from { transform:translateY(-30px); opacity:0; }
-    to { transform:translateY(0); opacity:1; }
-}
-
+/* ANIMATIONS */
 @keyframes fadeInUp {
     from { transform:translateY(30px); opacity:0; }
     to { transform:translateY(0); opacity:1; }
@@ -114,7 +98,7 @@ nav a.active {
     to { color:red; }
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer {
     padding:15px 0;
     text-align:center;
@@ -122,7 +106,7 @@ footer {
     font-size:.9rem;
 }
 
-/* ================= 📱 MOBILE ONLY ================= */
+/* 📱 MOBILE */
 @media (max-width:768px) {
 
     header {
@@ -151,11 +135,6 @@ footer {
         background-attachment:scroll;
     }
 
-    .title-section h1 {
-        font-size:3rem;
-        letter-spacing:3px;
-    }
-
     .title-section p {
         font-size:1.4rem;
         bottom:20px;
@@ -180,7 +159,6 @@ footer {
 </header>
 
 <section class="title-section">
-    <h1>TWENTY ØNE PILØTS</h1>
     <p>Coming Soon</p>
 </section>
 
