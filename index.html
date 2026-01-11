@@ -1,139 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Twenty One Pilots</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="https://i.ibb.co/rG82jrD8/favicon-32x32.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Anton&family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
 * {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family:'Montserrat',sans-serif;
-    background:#000;
-    color:white;
+    font-family: 'Montserrat', sans-serif;
+    background: #000;
+    color: #fff;
 }
 
 /* HEADER */
 header {
-    position:fixed;
-    top:0;
-    width:100%;
-    padding:16px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(0,0,0,0.65);
-    backdrop-filter:blur(12px);
-    z-index:1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
 }
 
 .logo {
-    font-family:'Anton',sans-serif;
-    font-size:1.6rem;
-    letter-spacing:2px;
-    text-transform:uppercase;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 nav ul {
-    list-style:none;
-    display:flex;
-    gap:24px;
+    list-style: none;
+    display: flex;
+    gap: 24px;
 }
 
 nav a {
-    font-family:'Anton',sans-serif;
-    color:#aaa;
-    text-decoration:none;
-    pointer-events:none;
+    font-family: 'Anton', sans-serif;
+    color: #aaa;
+    text-decoration: none;
+    pointer-events: none;
 }
 
 nav a.active {
-    color:#fff;
+    color: #fff;
 }
 
-/* HERO SECTION */
+/* HERO */
 .title-section {
-    width:100%;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding-top:80px;
-    background-image:url('https://i.ibb.co/HWS98rg/805.jpg');
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position:center;
-    color:white;
-    position:relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+    background-image: url('https://i.ibb.co/HWS98rg/805.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 .title-section h1 {
-    font-family:'Anton',sans-serif;
-    font-size:clamp(2.5rem, 6vw, 4.5rem);
-    letter-spacing:4px;
-    text-shadow:2px 2px 15px rgba(0,0,0,0.8);
-    margin-bottom:15px;
-    opacity:0;
-    animation:fadeInDown 1.2s ease-out forwards;
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.8);
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInDown 1.2s ease forwards;
 }
 
 .title-section p {
-    font-family:'Montserrat Alternates',sans-serif;
-    font-weight:700;
-    font-size:clamp(1.2rem, 3vw, 2rem);
-    letter-spacing:2px;
-    position:absolute;
-    bottom:30px;
-    opacity:0;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 30px;
+    opacity: 0;
     animation:
-        fadeInUp 1.5s ease-out forwards,
+        fadeInUp 1.5s ease forwards,
         redWhitePulse 1.5s infinite alternate;
 }
 
 /* ANIMATIONS */
 @keyframes fadeInDown {
-    from {transform:translateY(-30px); opacity:0;}
-    to {transform:translateY(0); opacity:1;}
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes fadeInUp {
-    from {transform:translateY(30px); opacity:0;}
-    to {transform:translateY(0); opacity:1;}
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes redWhitePulse {
-    from {color:white;}
-    to {color:red;}
+    from { color: white; }
+    to { color: red; }
 }
 
 /* FOOTER */
 footer {
-    padding:15px 0;
-    text-align:center;
-    color:#ccc;
-    font-size:.9rem;
+    padding: 15px 0;
+    text-align: center;
+    color: #ccc;
+    font-size: 0.9rem;
 }
 
-/* 📱 MOBILE */
-@media (max-width:768px) {
+/* MOBILE */
+@media (max-width: 768px) {
 
     header {
-        flex-direction:column;
-        gap:10px;
+        flex-direction: column;
+        gap: 10px;
     }
 
     nav ul {
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:16px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
     }
 
     .title-section {
-        background-attachment:scroll;
-    }
-
-    .title-section p {
-        bottom:20px;
+        background-attachment: scroll;
     }
 }
 </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">twenty øne piløts</div>
+    <nav>
+        <ul>
+            <li><a class="active">Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Music</a></li>
+            <li><a>News</a></li>
+            <li><a>Pictures</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="title-section">
+    <h1>TWENTY ØNE PILØTS</h1>
+    <p>Coming Soon</p>
+</section>
+
+<footer>
+    © 2025 Twenty One Pilots
+</footer>
+
+</body>
+</html>
