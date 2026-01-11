@@ -81,6 +81,8 @@ nav a.active {
     letter-spacing:2px;
     position:absolute;
     bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
     opacity:0;
     animation:
         fadeInUp 1.5s ease-out forwards,
@@ -89,8 +91,8 @@ nav a.active {
 
 /* ANIMATIONS */
 @keyframes fadeInUp {
-    from { transform:translateY(30px); opacity:0; }
-    to { transform:translateY(0); opacity:1; }
+    from { transform:translate(-50%, 30px); opacity:0; }
+    to { transform:translate(-50%, 0); opacity:1; }
 }
 
 @keyframes redWhitePulse {
