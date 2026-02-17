@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Twenty One Pilots – News</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="https://i.ibb.co/rG82jrD8/favicon-32x32.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Anton&family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: clamp(15px, 3vw, 28px);
+    padding-right: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-family: 'Anton', sans-serif;
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+nav a:hover,
+nav a.active {
+    color: #fff;
+}
+
+/* HERO SECTION – FULL IMAGE VISIBLE */
+.news-hero {
+    position: relative;
+    margin-top: 80px;
+    padding: clamp(60px, 8vw, 120px) 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Blur background */
+.news-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('https://i.ibb.co/zW02WFhh/625156433-25859542677070377-2449806901347579308-n.jpg') center/cover no-repeat;
+    filter: blur(35px) brightness(0.4);
+    transform: scale(1.2);
+    z-index: 0;
+}
+
+/* Main Image */
+.news-hero img {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 16px;
+    z-index: 1;
+    box-shadow: 0 30px 90px rgba(0,0,0,0.8);
+    transition: transform 0.5s ease;
+}
+
+.news-hero img:hover {
+    transform: scale(1.03);
+}
+
+/* CONTENT */
+.news-section {
+    padding: clamp(60px, 8vw, 100px) 20px 80px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.news-content {
+    max-width: 850px;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.news-content h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+.news-content h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #fff;
+    margin: 15px auto 0;
+}
+
+.news-content p {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    line-height: 1.9;
+    color: #ddd;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FOOTER */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">twenty øne piløts</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a class="active" href="news.html">News</a></li>
+            <li><a href="#">Pictures</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="news-hero">
+    <img src="https://i.ibb.co/zW02WFhh/625156433-25859542677070377-2449806901347579308-n.jpg"
+         alt="Twenty One Pilots Live">
+</section>
+
+<section class="news-section">
+    <div class="news-content">
+        <h1>News</h1>
+        <p>
+            This event is going to happen in the Cultural Centre in the small hall,
+            don’t get stressed, but get ready to hear stressed out live.
+            See you there!
+        </p>
+    </div>
+</section>
+
+<footer>
+    АСНОМ Гостивар
+</footer>
+
+</body>
+</html>
+

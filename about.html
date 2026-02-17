@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Twenty One Pilots – About</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="https://i.ibb.co/rG82jrD8/favicon-32x32.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Anton&family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    padding-right: 20px;
+}
+
+nav a {
+    font-family: 'Anton', sans-serif;
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #fff;
+}
+
+/* HERO IMAGE */
+.about-hero {
+    width: 100%;
+    height: 70vh;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(10%) contrast(110%);
+    transform: scale(1);
+    transition: transform 6s ease;
+}
+
+.about-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.7),
+        #000
+    );
+}
+
+.about-hero:hover img {
+    transform: scale(1.08);
+}
+
+/* ABOUT CONTENT */
+.about-section {
+    padding: 80px 20px 60px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 850px;
+}
+
+.about-content h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+.about-content p {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.9;
+    color: #ddd;
+}
+
+/* FOOTER */
+footer {
+    padding: 15px 0;
+    text-align: center;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .about-hero {
+        height: 45vh;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+        padding-left: 10px;
+    }
+
+    nav ul {
+        gap: 18px;
+        padding-right: 10px;
+    }
+
+    .about-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-content p {
+        font-size: 1.1rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">twenty øne piløts</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active">About</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Pictures</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="about-hero">
+    <img src="https://i.ibb.co/Pv66BDgt/615169892-4302316453381916-3409420900361046480-n.jpg" alt="Twenty One Pilots">
+</section>
+
+<section class="about-section">
+    <div class="about-content">
+        <h1>About</h1>
+        <p>
+            Borjan (Tyler) and Viktor (Josh) are going to perform in the Cultural Centre in Gostivar
+            that’s going to happen somewhere in March.
+            <br><br>
+            So get ready for some music and stay tuned.
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2025 Twenty One Pilots
+</footer>
+
+</body>
+</html>

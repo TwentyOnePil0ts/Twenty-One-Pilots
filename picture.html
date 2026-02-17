@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Twenty One Pilots – Pictures</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="https://i.ibb.co/rG82jrD8/favicon-32x32.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Anton&family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: clamp(15px, 3vw, 28px);
+    padding-right: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-family: 'Anton', sans-serif;
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+nav a:hover,
+nav a.active {
+    color: #fff;
+}
+
+/* TITLE */
+.pictures-title {
+    margin-top: 120px;
+    text-align: center;
+}
+
+.pictures-title h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: 4px;
+}
+
+.pictures-title h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #fff;
+    margin: 15px auto 0;
+}
+
+/* GALLERY */
+.gallery {
+    padding: clamp(40px, 6vw, 80px) 20px 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* whole image visible */
+    border-radius: 16px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.gallery img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+}
+
+/* FOOTER */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">twenty øne piløts</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a class="active" href="pictures.html">Pictures</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="pictures-title">
+    <h1>Gallery</h1>
+</section>
+
+<section class="gallery">
+    <img src="https://i.ibb.co/MTzKxG7/628413262-958355336521894-5144304737038346122-n.jpg" alt="Live Photo 1">
+    <img src="https://i.ibb.co/DgRK2VZW/615169892-4302316453381916-3409420900361046480-n.jpg" alt="Live Photo 2">
+</section>
+
+<footer>
+    © 2025 Twenty One Pilots
+</footer>
+
+</body>
+</html>
