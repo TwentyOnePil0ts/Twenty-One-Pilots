@@ -1,165 +1,165 @@
 <!DOCTYPE html>
-<html lang="mk">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Twenty One Pilots</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YOU GOT HACKED</title>
+
+<link rel="icon" type="image/png" href="https://i.ibb.co/rG82jrD8/favicon-32x32.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Anton&family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
     margin: 0;
-    background: black;
-    overflow: hidden;
-    font-family: monospace;
-    color: #00ff00;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    padding-right: 20px;
+}
+
+nav a {
+    font-family: 'Anton', sans-serif;
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #fff;
+}
+
+/* HERO */
+.title-section {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('https://i.ibb.co/HWS98rg/805.jpg');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    position: relative;
     text-align: center;
 }
 
-/* MATRIX */
-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 0;
+.title-section p {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 2px;
+
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards, redWhitePulse 1.5s infinite alternate;
 }
 
-/* CONTENT */
-.content {
-    position: relative;
-    z-index: 2;
-    padding: 20px;
-    animation: shake 0.2s infinite;
+/* ANIMATIONS */
+@keyframes fadeInUp {
+    from {
+        transform: translate(-50%, 30px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
 }
 
-h1 {
-    font-size: clamp(28px, 6vw, 55px);
-    color: red;
-    animation: glitch 0.8s infinite;
+@keyframes redWhitePulse {
+    from { color: #fff; }
+    to { color: red; }
 }
 
-p {
-    font-size: clamp(16px, 4vw, 24px);
-    margin-top: 15px;
-    color: white;
+/* FOOTER */
+footer {
+    padding: 15px 0;
+    text-align: center;
+    color: #ccc;
+    font-size: 0.9rem;
 }
 
-/* WARNING TEXT */
-.warning {
-    margin-top: 20px;
-    font-size: clamp(14px, 3.5vw, 22px);
-    color: yellow;
-    text-shadow: 0 0 10px red;
-    animation: glitch 1.2s infinite;
-}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .logo {
+        padding-left: 10px;
+        font-size: 1.4rem;
+    }
 
-img {
-    width: clamp(180px, 60vw, 280px);
-    margin-top: 25px;
-    border: 3px solid red;
-    box-shadow: 0 0 30px red;
-}
+    nav ul {
+        padding-right: 10px;
+        gap: 18px;
+    }
 
-/* GLITCH */
-@keyframes glitch {
-    0% { text-shadow: 4px 4px red; }
-    25% { text-shadow: -4px -4px blue; }
-    50% { text-shadow: 4px -4px lime; }
-    75% { text-shadow: -4px 4px red; }
-    100% { text-shadow: 4px 4px blue; }
-}
-
-/* SHAKE */
-@keyframes shake {
-    0% { transform: translate(1px, 1px); }
-    25% { transform: translate(-1px, -2px); }
-    50% { transform: translate(-3px, 0px); }
-    75% { transform: translate(3px, 2px); }
-    100% { transform: translate(1px, -1px); }
+    .title-section p {
+        font-size: 1.5rem;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<canvas id="matrix"></canvas>
+<header>
+    <div class="logo">twenty øne piløts</div>
+    <nav>
+        <ul>
+<li><a href="index.html" class="active">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="music.html">Music</a></li>
+<li><a href="news.html">News</a></li>
+<li><a href="picture.html">Pictures</a></li>
 
-<div class="content">
-    <h1>ВАШАТА СТРАНИЦА Е У КУРАЦ!</h1>
+        </ul>
+    </nav>
+</header>
 
-    <p id="typing"></p>
+<section class="title-section" id="home">
+</section>
 
-    <p class="warning">
-        Не се дадени ПРИТЕ за да се пуши страницата !<br>
-        Виктор Грујоски и Бројан Јач/ќимоски<br>
-        не бидете евреини со почит
-    </p>
-
-    <img src="https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif" alt="hacked">
-</div>
-
-<script>
-/* MATRIX EFFECT */
-const canvas = document.getElementById("matrix");
-const ctx = canvas.getContext("2d");
-
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
-
-const letters = "HACKED123456789@#$%^&*";
-const fontSize = 16;
-let columns;
-let drops = [];
-
-function initDrops() {
-    columns = Math.floor(canvas.width / fontSize);
-    drops = [];
-    for (let i = 0; i < columns; i++) {
-        drops[i] = Math.random() * canvas.height;
-    }
-}
-initDrops();
-window.addEventListener("resize", initDrops);
-
-function drawMatrix() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.fillStyle = "#0F0";
-    ctx.font = fontSize + "px monospace";
-
-    for (let i = 0; i < drops.length; i++) {
-        const text = letters[Math.floor(Math.random() * letters.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-            drops[i] = 0;
-        }
-        drops[i]++;
-    }
-}
-setInterval(drawMatrix, 33);
-
-/* TYPING EFFECT */
-const message = "Хакирана е и ич кур не го боли газдата за тоа 😂 ACCESS GRANTED...";
-let index = 0;
-
-function typing() {
-    if (index < message.length) {
-        document.getElementById("typing").innerHTML += message.charAt(index);
-        index++;
-        setTimeout(typing, 40);
-    }
-}
-typing();
-</script>
+<footer>
+    © 2025 Twenty One Pilots
+</footer>
 
 </body>
 </html>
