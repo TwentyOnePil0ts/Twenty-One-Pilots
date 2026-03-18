@@ -66,49 +66,27 @@ nav a.active {
 .title-section {
     width: 100%;
     min-height: 100vh;
-    background-image: url('https://i.ibb.co/HWS98rg/805.jpg');
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-attachment: fixed;
+    background: linear-gradient(180deg, #000 0%, #111 100%);
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    text-align: center;
+    gap: 20px;
+    padding-top: 80px;
 }
 
-.title-section p {
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-    letter-spacing: 2px;
-
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    opacity: 0;
-    animation: fadeInUp 1.5s ease-out forwards, redWhitePulse 1.5s infinite alternate;
+/* IMAGES */
+.hero-img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+    transition: transform 0.4s ease;
 }
 
-/* ANIMATIONS */
-@keyframes fadeInUp {
-    from {
-        transform: translate(-50%, 30px);
-        opacity: 0;
-    }
-    to {
-        transform: translate(-50%, 0);
-        opacity: 1;
-    }
-}
-
-@keyframes redWhitePulse {
-    from { color: #fff; }
-    to { color: red; }
+.hero-img:hover {
+    transform: scale(1.05);
 }
 
 /* FOOTER */
@@ -121,18 +99,8 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .logo {
-        padding-left: 10px;
-        font-size: 1.4rem;
-    }
-
-    nav ul {
-        padding-right: 10px;
-        gap: 18px;
-    }
-
-    .title-section p {
-        font-size: 1.5rem;
+    .hero-img {
+        max-width: 95%;
     }
 }
 </style>
@@ -149,12 +117,22 @@ footer {
 <li><a href="music.html">Music</a></li>
 <li><a href="news.html">News</a></li>
 <li><a href="picture.html">Pictures</a></li>
-
         </ul>
     </nav>
 </header>
 
 <section class="title-section" id="home">
+
+    <!-- ПРВА (сега е новата) -->
+    <img class="hero-img"
+         src="https://i.ibb.co/0Vd3GpQt/651494707-26167107012949586-1946471839755150891-n.jpg"
+         alt="Image 1">
+
+    <!-- ВТОРА (старата) -->
+    <img class="hero-img"
+         src="https://i.ibb.co/HWS98rg/805.jpg"
+         alt="Image 2">
+
 </section>
 
 <footer>
