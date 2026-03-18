@@ -67,13 +67,12 @@ nav a.active {
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(180deg, #000 0%, #111 100%);
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding-top: 140px; /* ✔ САМО ОВА Е ЗГОЛЕМЕНО */
+    padding-top: 140px; /* за компјутер */
 }
 
 /* IMAGES */
@@ -97,14 +96,31 @@ footer {
     font-size: 0.9rem;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE - САМО ЗА ТЕЛЕФОН */
 @media (max-width: 768px) {
-    .hero-img {
-        max-width: 95%;
+    /* Намалување на header */
+    header {
+        padding: 10px 0;
     }
 
+    .logo {
+        font-size: 1.3rem;
+        padding-left: 10px;
+    }
+
+    nav ul {
+        gap: 12px;
+        padding-right: 10px;
+        flex-wrap: wrap; /* цело мени да се види */
+    }
+
+    /* Сликите подолу */
     .title-section {
-        padding-top: 120px; /* за телефон */
+        padding-top: 160px;
+    }
+
+    .hero-img {
+        max-width: 95%;
     }
 }
 </style>
@@ -116,11 +132,11 @@ footer {
     <div class="logo">twenty øne piløts</div>
     <nav>
         <ul>
-<li><a href="index.html" class="active">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="music.html">Music</a></li>
-<li><a href="news.html">News</a></li>
-<li><a href="picture.html">Pictures</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="picture.html">Pictures</a></li>
         </ul>
     </nav>
 </header>
