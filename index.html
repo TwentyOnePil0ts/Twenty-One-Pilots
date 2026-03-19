@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,26 +67,49 @@ nav a.active {
 .title-section {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(180deg, #000 0%, #111 100%);
+    background-image: url('https://i.ibb.co/HWS98rg/805.jpg');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding-top: 140px; /* за компјутер */
+    position: relative;
+    text-align: center;
 }
 
-/* IMAGES */
-.hero-img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.7);
-    transition: transform 0.4s ease;
+.title-section p {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 2px;
+
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards, redWhitePulse 1.5s infinite alternate;
 }
 
-.hero-img:hover {
-    transform: scale(1.05);
+/* ANIMATIONS */
+@keyframes fadeInUp {
+    from {
+        transform: translate(-50%, 30px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes redWhitePulse {
+    from { color: #fff; }
+    to { color: red; }
 }
 
 /* FOOTER */
@@ -96,31 +120,20 @@ footer {
     font-size: 0.9rem;
 }
 
-/* RESPONSIVE - САМО ЗА ТЕЛЕФОН */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    /* Намалување на header */
-    header {
-        padding: 10px 0;
-    }
-
     .logo {
-        font-size: 1.3rem;
         padding-left: 10px;
+        font-size: 1.4rem;
     }
 
     nav ul {
-        gap: 12px;
         padding-right: 10px;
-        flex-wrap: wrap; /* цело мени да се види */
+        gap: 18px;
     }
 
-    /* Сликите подолу */
-    .title-section {
-        padding-top: 160px;
-    }
-
-    .hero-img {
-        max-width: 95%;
+    .title-section p {
+        font-size: 1.5rem;
     }
 }
 </style>
@@ -132,25 +145,17 @@ footer {
     <div class="logo">twenty øne piløts</div>
     <nav>
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="music.html">Music</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="picture.html">Pictures</a></li>
+<li><a href="index.html" class="active">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="music.html">Music</a></li>
+<li><a href="news.html">News</a></li>
+<li><a href="picture.html">Pictures</a></li>
+
         </ul>
     </nav>
 </header>
 
 <section class="title-section" id="home">
-
-    <img class="hero-img"
-         src="https://i.ibb.co/0Vd3GpQt/651494707-26167107012949586-1946471839755150891-n.jpg"
-         alt="Image 1">
-
-    <img class="hero-img"
-         src="https://i.ibb.co/HWS98rg/805.jpg"
-         alt="Image 2">
-
 </section>
 
 <footer>
